@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../css/bootstrap5-css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/sidebar.css" rel=stylesheet>
+
+    <title>Seleccionar Asignatura Optativa | SGAOpta</title>
+
+    <script src="../js/bootstrap5-js/bootstrap.bundle.min.js"></script>    
+    <script src="../js/bootstrap5-js/popper.min.js"></script> 
+    
+</head>
+
+<body>
+
+
+
+<!--Cabecera-->
+  <header class="p-3 mb-3 border-bottom bg-light">
+    <div class="container-fluid">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+          <img class="p-1 m-1" src="../imag/bootstrap-icons/house-door.svg" alt="Bootstrap" width="32" height="32">
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 link-secondary">Estudiante</a></li>
+        </ul>
+        <!--buscar
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <input type="search" class="form-control" placeholder="Buscar..." aria-label="Search">-->
+         
+        </form>
+        <!--user-->
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../imag/bootstrap-icons/person.svg" alt="usuario" class="rounded-circle" width="32" height="32">
+          </a>
+          <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+            <li><a class="dropdown-item" href="#">Desconectarse</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+      
+          <!--Principal Section -->
+      <div class="container-fluid pb-3 mt-1 mb-5 p-2">
+        <div class="row bg-light">
+          <!--Aside-->
+          <div class="col-2">
+            <div class=" rounded-3 m-2 " >
+              <div class="flex-shrink-0 p-3 bg-white " style="width: 200px;">
+                <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                  <img class="p-1 m-1" src="../imag/bootstrap-icons/gear.svg" alt="Bootstrap" width="32" height="32">
+                  <span class="fs-6 fw-semibold text-center">Seleccionar asignaturas optativas</span>
+                </a>
+                <!--
+                <ul class="list-unstyled ps-0  border-bottom">
+
+                  <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                      Opciones
+                    </button>
+                    <div class="collapse show" id="home-collapse" >
+                      <ul class="btn-toggle-nav  list-unstyled fw-normal pb-1 small">
+                        <li><a href="#" class="link-dark rounded">Insertar</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+                -->
+              </div>
+            </div>
+          </div>
+        
+          <!--Area de selección-->
+          <div class=" col-6 bg-light">
+            <div class=" border-top border-bottom rounded-3">
+              <div class="container mt-5">
+                <div class="h5 text-center mb-5">Seleccione las asignaturas en el orden de su preferencia:</div>
+              
+
+                <form class="row gy-2 gx-3 align-items-center">
+                  <ol>
+                  <li class="m-1 p-1"><div class="col-12">
+                    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                    <select class="form-select" id="autoSizingSelect">
+                      <option selected>-Selecione-</option>
+                      <option value="1">Internet de las cosas</option>
+                      <option value="2">Web semántica</option>
+                      <option value="3">Seguridad en dispositivos móviles</option>
+                    </select>
+                  </div>
+                </li>
+                  <li class="m-1 p-1"> <div class="col-12">
+                    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                    <select class="form-select" id="autoSizingSelect">
+                      <option selected>-Selecione-</option>
+                      <option value="1">Internet de las Cosas</option>
+                      <option value="2">Web semántica</option>
+                      <option value="3">Seguridad en Dispositivos móviles</option>
+                    </select>
+                  </div>
+                </li>
+                <li class="m-1 p-1">
+                  <div class="col-12">
+                    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+                    <select class="form-select" id="autoSizingSelect">
+                      <option selected>-Selecione-</option>
+                      <option value="1">Internet de las Cosas</option>
+                      <option value="2">Web semántica</option>
+                      <option value="3">Seguridad en Dispositivos móviles</option>
+                    </select>
+                  </div>
+                </li>
+                </ol>
+                <div class="col-10"></div>
+                  <div class="col-2 pb-5 ">
+                    <button type="submit" class="btn btn-primary" id="liveToastBtn">Aceptar</button>
+                  </div>
+                </form >
+
+
+              </div>
+            </div>
+          </div><!--end Col 6-->
+
+          <!--Aside - info de Optativas-->
+          <div class=" col-4 border-top rounded-3 bg-light">
+            <div class="rounded-3">
+              <div class="container mt-2">
+                <div class="h3 p-2">Asignaturas disponibles: </div>
+                <div class="accordion small" id="accordionPanelsStayOpenExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                      <button class="accordion-button collapsed p-2" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                        Internet de las cosas
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                      <div class="accordion-body">
+                        <strong>Internet of Things (IoT)</strong> describe la red de objetos físicos (cosas) que incorporan sensores, software y otras tecnologías con el fin de conectar e intercambiar datos con otros dispositivos y sistemas a través de Internet.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                      <button class="accordion-button collapsed p-2" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                        Web Semántica
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                      <div class="accordion-body">
+                        <strong>La Web Semántica </strong> es una Web extendida, dotada de mayor significado en la que cualquier usuario en Internet podrá encontrar respuestas a sus preguntas de forma más rápida y sencilla gracias a una información mejor definida.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                      <button class="accordion-button collapsed p-2" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                        Seguridad en dispositivos móviles
+                      </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                      <div class="accordion-body">
+                        <strong>Los dispositivos móviles</strong>  son cada vez más llamativos para los ladrones o delincuentes informáticos, por lo que es necesario utilizar herramientas de seguridad como la contraseña y aplicaciones para bloquear, rastrear y borrar remotamente la información almacenada en el equipo en caso de robo o pérdida.</div>
+                    </div>
+                  </div>
+                </div>
+                
+
+              </div>
+            </div>
+          </div><!--end Col 4-->
+
+
+
+        </div>
+          <!--row principal-->
+        </div>
+      </div>
+
+      <!--FLOTANTE ASIGNATURAS GUARDADAS-->
+     
+<!----------------------------------------------->
+
+
+
+
+      <!---------------------------------------->
+
+
+     <!--FOOTER-->
+     <div class="container mt-5 bg-light">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+          <span class="text-muted">© 2021 SGAOpta </span>
+        </div>
+    
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+        </ul>
+      </footer>
+    </div>
+</body>
+
+</html>

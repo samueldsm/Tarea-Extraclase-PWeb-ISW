@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../css/bootstrap5-css/bootstrap.min.css" rel="stylesheet">
+    <title>Autenticarse</title>
+    <script src="../js/funciones.js"></script> 
+
+
+</head>
+<body>
+
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+          <div class="col-lg-7 text-center text-lg-start">
+            <h1 class="display-4 fw-bold lh-1 mb-3">SGAOpta</h1>
+            <p class="col-lg-10 fs-4">Sistema informático, sustentado en las
+                nuevas tecnologías, que contribuye al proceso de gestión y almacenamiento de la información de la
+                matrícula de las asignaturas optativas de la Facultad 2 de la Universidad de las Ciencias Informáticas.</p>
+          </div>
+          <div class="col-md-10 mx-auto col-lg-5">
+              
+            <form class="p-4 p-md-5 border rounded-3 bg-light" action="seleccionarao.html" name="form">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control " id="sistemaseguridadusuario" placeholder="usuario">
+                <label for="sistema-seguridad-usuario">Usuario</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="sistemaseguridadcontrasenna" placeholder="Password">
+                <label for="sistema-seguridad-contrasenna">Contraseña</label>
+              </div>
+              <div class="checkbox mb-3">
+                <label>
+                  <input type="checkbox" value="remember-me"> Recordarme
+                </label>
+              </div>
+              <button class="w-100 btn btn-lg btn-primary" type="submit" id="sistema-seguridad-aceptar" onclick=go()>Entrar</button>
+              <hr class="my-4">
+              <small class="text-muted">Al autenticarte, estás de acuerdo con los terminos de uso.</small>
+            </form>
+          </div>
+        </div>
+      </div>    
+    
+</body>
+</html>

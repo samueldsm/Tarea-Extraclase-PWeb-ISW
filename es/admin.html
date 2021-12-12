@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../css/bootstrap5-css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/sidebar.css" rel=stylesheet>
+
+    <title>Administrador | SGAOpta</title>
+
+    <script src="../js/bootstrap5-js/bootstrap.bundle.min.js"></script>    
+    <script src="../js/bootstrap5-js/popper.min.js"></script> 
+    <script src="../js/funciones.js"></script>  
+
+    <!--MODAL-->
+    <script>
+      var myModal = document.getElementById('myModal')
+      var myInput = document.getElementById('myInput')
+
+      myModal.addEventListener('shown.bs.modal', function () {
+        myInput.focus()
+      })
+
+    </script>
+
+</head>
+
+<body>
+
+
+
+<!--Cabecera-->
+  <header class="p-3 mb-3 border-bottom bg-light">
+    <div class="container-fluid ">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+          <img class="p-1 m-1" src="../imag/bootstrap-icons/house-door.svg" alt="Bootstrap" width="32" height="32">
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 link-secondary">Administrador</a></li>
+        </ul>
+        <!--buscar
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+          <input type="search" class="form-control" placeholder="Buscar..." aria-label="Search">-->
+         
+        </form>
+        <!--user-->
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="../imag/bootstrap-icons/person.svg" alt="usuario" class="rounded-circle" width="32" height="32">
+          </a>
+          <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+            <li><a class="dropdown-item" href="#">Desconectarse</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+      
+          <!--Principal Section -->
+      <div class="container-fluid pb-3 mt-1 mb-5 p-2 bg-light">
+        <div class="row">
+          <!--Aside-->
+          <div class="col-2">
+            <div class=" rounded-3 m-2" >
+              <div class="flex-shrink-0 p-3 bg-white " style="width: 200px;">
+                <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                  <img class="p-1 m-1" src="../imag/bootstrap-icons/gear.svg" alt="Bootstrap" width="32" height="32">
+                  <span class="fs-6 fw-semibold text-center">Gestionar Usuarios</span>
+                </a>
+                <!--
+                <ul class="list-unstyled ps-0  border-bottom">
+
+                  <li class="mb-1">
+                    <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                      Opciones
+                    </button>
+                    <div class="collapse show" id="home-collapse" >
+                      <ul class="btn-toggle-nav  list-unstyled fw-normal pb-1 small">
+                        <li><a href="#" class="link-dark rounded">Insertar</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+                -->
+              </div>
+            </div>
+          </div>
+        
+          <!--CRUD-->
+          <div class=" col-10">
+            <div class=" border rounded-3">
+              <div class="container mt-2">
+                <!--BOTONES-->
+                <div class="row">
+
+                  <!-- Button trigger modal -->
+                  
+                  <div class="col-4">
+                    <button type="button" class="btn rounded-circle" title="Insertar usuario" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <img class=" m-1" src="../imag/bootstrap-icons/plus-circle.svg" title="Insertar usuario" alt="Insertar" width="24" height="24">
+                   
+                      </button>
+                      <!-- Modal INSERTAR -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Insertar un usuario</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                          <button type="button" class="btn btn-primary">Guardar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn rounded-circle" title="Modificar Usuario">
+
+                    <img class=" m-1" src="../imag/bootstrap-icons/pen.svg" title="Modificar Usuario" alt="Modificar" width="24" height="24">
+                 
+                    </button>
+
+                    <button type="button" class="btn rounded-circle" title="Eliminar Usuario">
+                      <img class=" m-1" src="../imag/bootstrap-icons/trash-fill.svg" title="Eliminar Usuario" alt="Eliminar" width="24" height="24">
+                   
+                      </button>
+                  </div>
+                  
+                  <div class="col-7 ">
+                    <!--buscar-->
+                  <form class=" col-lg-12 mt-1 mb-lg-0 me-lg-3">
+                    <input type="search" class="form-control" placeholder="Nombre, apellidos, asignatura, Usuario" aria-label="Search">
+
+                    
+                  </div>
+                  <div class="col-1 ">
+                    <button type="button" class="btn">
+                      <img class="" src="../imag/bootstrap-icons/search.svg" title="Buscar" alt="Buscar" width="24" height="24">
+                   
+                      </button>
+                  </div>
+                  
+                  
+                  
+                </div>
+
+                <!--FILTRADO-->
+                  <div class="row">
+                    <div class="col-7"></div>
+                    <div class="col-2 text-end small mt-1"><p >Filtrar b&uacute;squeda</p></div>
+                    <div class="col-2">
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                      <option selected>-Seleccionar-</option>
+                      <option value="1">Nombre</option>
+                      <option value="2">Apellidos</option>
+                      <option value="3">Usuario</option>
+                      <option value="4">Asignatura</option>
+                      <option value="5">Categoría</option>
+
+                   </select>
+                    </div>
+                    <div class="col-1"></div>
+                  </div>
+
+                  <!--Fila de la Tabla-->
+                <div class="row p-1">
+                  <table class="table table-sm p-1 table-hover text-center">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Apellidos</th>
+                          <th scope="col">Usuario</th>
+                          <th scope="col">Asignatura</th>
+                          <th scope="col">Categoría</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                          <td>@mdo</td>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Jacob</td>
+                          <td>Thornton</td>
+                          <td>@fat</td>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td >Larry the Bird</td>
+                          <td > Bird</td>
+                          <td>@twitter</td>
+                          <td>Mark</td>
+                          <td>Otto</td>
+                        </tr>
+                        <th scope="row">4</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">5</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">6</th>
+                        <td >Larry the Bird</td>
+                        <td > Bird</td>
+                        <td>@twitter</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                      </tr> <th scope="row">7</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">8</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">9</th>
+                      <td >Larry the Bird</td>
+                      <td > Bird</td>
+                      <td>@twitter</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                    </tr> 
+                      <th scope="row">10</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                    </tr>
+                  </tbody>  
+                </table><!--FIN TABLA-->
+
+                <!--nav area-->
+            <nav aria-label="Page navigation example mt-3 ">
+              <ul class="pagination small justify-content-center">
+                <li class="page-item">
+                  <a class="page-link text-opacity-50 text-dark" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link text-opacity-50 text-dark" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link text-opacity-50 text-dark" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link text-opacity-50 text-dark" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+
+                </div>
+
+              </div>
+            </div>
+            
+
+
+
+          </div><!--end Col 10-->
+        </div>
+          <!--row principal-->
+        </div>
+      </div>
+
+     <!--FOOTER-->
+     <div class="container mt-5 bg-light">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+          <span class="text-muted">© 2021 SGAOpta </span>
+        </div>
+    
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+          <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+        </ul>
+      </footer>
+    </div>
+</body>
+
+</html>
