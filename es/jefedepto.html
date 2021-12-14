@@ -96,21 +96,81 @@
                 <div class="row">
                   
                   <div class="col-4">
-                    <button type="button" class="btn rounded-circle" title="Insertar Asignatura Optativa" >
+                    <button type="button" class="btn rounded-circle" title="Insertar grupo" data-bs-toggle="modal" data-bs-target="#createModal1">
                       <img class=" m-1" src="../imag/bootstrap-icons/plus-circle.svg" alt="Insertar" width="24" height="24">
                    
                       </button>
+                      <!-- Modal INSERTAR Button -->
+                  <div class="modal fade" id="createModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Insertar</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                          <button type="button" class="btn btn-primary">Guardar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-                  <button type="button" class="btn rounded-circle" title="Modificar Asignatura Optativa">
+                    <!--boton modificar-->
+                    <button type="button" class="btn rounded-circle" title="Modificar grupo" data-bs-toggle="modal" data-bs-target="#updateModal1">
 
-                    <img class=" m-1" src="../imag/bootstrap-icons/pen.svg" alt="Modificar" width="24" height="24">
-                 
-                    </button>
-
-                    <button type="button" class="btn rounded-circle" title="Insertar Asignatura Optativa">
-                      <img class=" m-1" src="../imag/bootstrap-icons/trash-fill.svg" alt="Eliminar" width="24" height="24">
+                      <img class=" m-1" src="../imag/bootstrap-icons/pen.svg" alt="Modificar" width="24" height="24">
                    
                       </button>
+  
+                      <!-- Modal Modificar Button-->
+                    <div class="modal fade" id="updateModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modificar</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                          
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Guardar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    
+                    <!-- Button trigger modal DELETE-->
+                    <button type="button" id="delete" class="btn rounded-circle" title="Eliminar grupo" data-bs-toggle="modal" data-bs-target="#deleteModal1">
+                      <img class=" m-1" src="../imag/bootstrap-icons/trash-fill.svg" alt="Eliminar" width="24" height="24">
+                   
+                      </button>                  
+                        <!-- Modal Eliminar -->
+                        <div class="modal fade" id="deleteModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Eliminar</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                ¿Está seguro que desea eliminar el(los) archivo(s) seleccionado(s)?
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-danger">Eliminar</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                   </div>
                   
                   <div class="col-7 ">
@@ -147,7 +207,7 @@
                   </div>
 
                   <!--Fila de la Tabla-->
-                <div class="row p-3 ">
+                <div class="row p-1 ">
                   <table class="table table-sm p-1 table-hover text-center">
                       <thead>
                         <tr>

@@ -89,13 +89,13 @@
                 </ul>
                 
               </div>
-<!--
+            <!-- CODIGO ANTIGUO PARA EL ASIDE 1-------------------
               <div class="flex-shrink-0 p-3 bg-white " style="width: 200px;">
                 <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
                   <img class="p-1 m-1" src="../imag/bootstrap-icons/people.svg" alt="users" width="32" height="32">
                   <span class="fs-6 fw-semibold text-center">Gestionar usuarios</span>
                 </a>
-      -------------------------------------------------
+   
                 <ul class="list-unstyled ps-0  border-bottom">
 
                   <li class="mb-1">
@@ -110,7 +110,7 @@
                   </li>
                 </ul>
               </div>
-            -->
+               --------------------------------------------------->
 
 
             </div>
@@ -124,21 +124,86 @@
                 <div class="row">
                   
                   <div class="col-4">
-                    <button type="button" class="btn rounded-circle" title="Insertar grupo" >
+
+                    <button type="button" class="btn rounded-circle" title="Insertar grupo" data-bs-toggle="modal" data-bs-target="#createModal">
                       <img class=" m-1" src="../imag/bootstrap-icons/plus-circle.svg" alt="Insertar" width="24" height="24">
                    
                       </button>
+                      <!-- Modal INSERTAR Button -->
+                  <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Insertar</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                          <button type="button" class="btn btn-primary">Guardar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-                  <button type="button" class="btn rounded-circle" title="Modificar grupo">
+                    <!--boton modificar-->
+                  <button type="button" class="btn rounded-circle" title="Modificar grupo" data-bs-toggle="modal" data-bs-target="#updateModal">
 
                     <img class=" m-1" src="../imag/bootstrap-icons/pen.svg" alt="Modificar" width="24" height="24">
                  
                     </button>
 
-                    <button type="button" id="delete" class="btn rounded-circle" title="Eliminar grupo" >
+                    <!-- Modal Modificar Button-->
+                  <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Modificar</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                          <button type="button" class="btn btn-primary">Guardar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                        <!--        ------------       -->
+                        <!-- Button trigger modal DELETE-->
+                    <button type="button" id="delete" class="btn rounded-circle" title="Eliminar grupo" data-bs-toggle="modal" data-bs-target="#deleteModal">
                       <img class=" m-1" src="../imag/bootstrap-icons/trash-fill.svg" alt="Eliminar" width="24" height="24">
                    
-                      </button>
+                      </button>                  
+                        <!-- Modal -->
+                        <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Eliminar</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                ¿Está seguro que desea eliminar el(los) archivo(s) seleccionado(s)?
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-danger">Eliminar</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+
                   </div>
                   
                   <div class="col-7 ">
