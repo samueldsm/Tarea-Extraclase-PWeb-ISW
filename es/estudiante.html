@@ -15,36 +15,48 @@
     <script src="../js/bootstrap5-js/popper.min.js"></script> 
     
 </head>
-
 <body>
 
 
 
 <!--Cabecera-->
-  <header class="p-3 mb-3 border-bottom bg-light">
+  <header class="p-3 mb-3 border-bottom border-3 bg-light rounded-bottom ">
     <div class="container-fluid">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+        <a href="principal.html" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
           <img class="p-1 m-1" src="../imag/bootstrap-icons/house-door.svg" alt="Bootstrap" width="32" height="32">
         </a>
 
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <ul class="nav col-2 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="principal.html" class="nav-link px-2 link-secondary">SGAOpta > </a></li>
+
           <li><a href="#" class="nav-link px-2 link-secondary">Estudiante</a></li>
         </ul>
         <!--buscar
         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
           <input type="search" class="form-control" placeholder="Buscar..." aria-label="Search">-->
          
-        </form>
-        <!--user-->
-        <div class="dropdown text-end">
-          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="../imag/bootstrap-icons/person.svg" alt="usuario" class="rounded-circle" width="32" height="32">
-          </a>
-          <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-            <li><a class="dropdown-item" href="#">Desconectarse</a></li>
+          <ul class="nav col-1  mb-2  mb-md-0 text-end">
+            <li> <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+              <img class="p-1 mb-1  " src="../imag/bootstrap-icons/question-circle.svg" alt="Bootstrap" width="32" height="32">
+            </a></li>
+            <!--user-->
+            <li>
+              <div class="dropdown text-end">
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle"  id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="../imag/bootstrap-icons/person.svg" alt="usuario"  class="rounded-circle" width="32" height="32">
+              </a>
+              <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                <li ><a class="dropdown-item" href="../index.html" id="logout">Desconectarse</a></li>
+              </ul>
+            </div>
+
+            </li>
           </ul>
-        </div>
+        
+
+       
+        
       </div>
     </div>
   </header>
@@ -57,7 +69,7 @@
             <div class=" rounded-3 m-2 " >
               <div class="flex-shrink-0 p-3 bg-white " style="width: 200px;">
                 <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
-                  <img class="p-1 m-1" src="../imag/bootstrap-icons/gear.svg" alt="Bootstrap" width="32" height="32">
+                  <img class="p-1 m-1" src="../imag/bootstrap-icons/pen.svg" alt="Bootstrap" width="32" height="32">
                   <span class="fs-6 fw-semibold text-center">Seleccionar asignaturas optativas</span>
                 </a>
                 <!--
@@ -91,7 +103,7 @@
                   <li class="m-1 p-1"><div class="col-12">
                     <label class="visually-hidden" for="autoSizingSelect">Preference</label>
                     <select class="form-select" id="autoSizingSelect">
-                      <option selected>-Selecione-</option>
+                      <option selected>-Seleccione-</option>
                       <option value="1">Internet de las cosas</option>
                       <option value="2">Web semántica</option>
                       <option value="3">Seguridad en dispositivos móviles</option>
@@ -101,7 +113,7 @@
                   <li class="m-1 p-1"> <div class="col-12">
                     <label class="visually-hidden" for="autoSizingSelect">Preference</label>
                     <select class="form-select" id="autoSizingSelect">
-                      <option selected>-Selecione-</option>
+                      <option selected>-Seleccione-</option>
                       <option value="1">Internet de las Cosas</option>
                       <option value="2">Web semántica</option>
                       <option value="3">Seguridad en Dispositivos móviles</option>
@@ -112,7 +124,7 @@
                   <div class="col-12">
                     <label class="visually-hidden" for="autoSizingSelect">Preference</label>
                     <select class="form-select" id="autoSizingSelect">
-                      <option selected>-Selecione-</option>
+                      <option selected>-Seleccione-</option>
                       <option value="1">Internet de las Cosas</option>
                       <option value="2">Web semántica</option>
                       <option value="3">Seguridad en Dispositivos móviles</option>
@@ -195,9 +207,9 @@
 
 
      <!--FOOTER-->
-     <div class="container mt-5 bg-light">
-      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
+     <div class="container-fluid mt-5   ">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top bg-light">
+        <div class="col-md-4 d-flex align-items-center ">
           <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
             <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
           </a>
@@ -211,6 +223,12 @@
         </ul>
       </footer>
     </div>
+
+
+
+    <!--SCRIPTS-->
+    <script src="../js/jquery360/jquery360.js"></script>
+    <script src="../js/my_jquery_functions.js"></script>
 </body>
 
 </html>
