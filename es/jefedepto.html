@@ -59,7 +59,7 @@
   </header>
       
 <!--Principal Section -->
-<div class="container-fluid pb-3 mt-1 mb-5 p-2 bg-light">
+<div class="container-fluid pb-3 mt-1 mb-5  bg-light">
         <div class="row ">
           <!--Aside-->
           <div class="col-2">
@@ -105,7 +105,7 @@
                     <div class="modal-dialog modal-dialog-scrollable">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Insertar</h5>
+                          <h5 class="modal-title" id="exampleModalLabel">Insertar una asignatura optativa</h5>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -132,7 +132,7 @@
                       <div class="modal-dialog modal-dialog-scrollable">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modificar</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Modificar asignatura optativa</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
@@ -211,26 +211,38 @@
                   <table class="table table-sm p-1 table-hover text-center">
                       <thead>
                         <tr>
-                          <th scope="col">#</th>
+                          <th scope="col">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                                <label class="form-check-label" for="flexCheckChecked"></label>
+                          </th>
                           <th scope="col">Asignatura</th>
                           <th scope="col">Matrícula</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Internet de las cosas</td>
+                        <div class="form-check">
+                            <tr>
+                             <th scope="row">
+                               <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                                <label class="form-check-label" for="flexCheckChecked"></label>
+                              </th>
+                        
+                              <td>Internet de las cosas</td>
+                             <td>50</td>                        
+                             </tr>
 
-                          <td>50</td>
+                            <tr>    
+                              <th scope="row">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                                <label class="form-check-label" for="flexCheckChecked"></label>
+                              </th>
+                              <td>Internet de las cosas</td>
+                              <td>50</td>
+                                                    
                           
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Web semántica</td>
-
-                          <td>20</td>
-                          
-                        </tr>
+                           </tr>
+                          </div>
+                    
                   </tbody>  
                 </table><!--FIN TABLA-->
                 </div>
