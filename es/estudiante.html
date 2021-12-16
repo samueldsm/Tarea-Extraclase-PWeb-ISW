@@ -98,37 +98,40 @@
                 <div class="h5 text-center mb-5">Seleccione las asignaturas en el orden de su preferencia:</div>
               
 
-                <form class="row gy-2 gx-3 align-items-center">
+                <form class="row gy-2 gx-3 align-items-center" id="asignaturas">
                   <ol>
                   <li class="m-1 p-1"><div class="col-12">
-                    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-                    <select class="form-select" id="autoSizingSelect">
-                      <option selected>-Seleccione-</option>
+                    <label class="visually-hidden" for="autoSizingSelect1">Preference</label>
+                    <select class="form-select" id="autoSizingSelect1" name="autoSizingSelect1">
+                      <option selected disabled>-Seleccione-</option>
                       <option value="1">Internet de las cosas</option>
                       <option value="2">Web semántica</option>
                       <option value="3">Seguridad en dispositivos móviles</option>
                     </select>
+                    <div class="alert alert-danger p-1" id="autoSizingSelect1-error" role="alert" style="display: none;">Campo requerido.</div>
                   </div>
                 </li>
                   <li class="m-1 p-1"> <div class="col-12">
-                    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-                    <select class="form-select" id="autoSizingSelect">
-                      <option selected>-Seleccione-</option>
+                    <label class="visually-hidden" for="autoSizingSelect2">Preference</label>
+                    <select class="form-select" id="autoSizingSelect2" name="autoSizingSelect2">
+                      <option selected disabled>-Seleccione-</option>
                       <option value="1">Internet de las Cosas</option>
                       <option value="2">Web semántica</option>
                       <option value="3">Seguridad en Dispositivos móviles</option>
                     </select>
+                    <div class="alert alert-danger p-1" id="autoSizingSelect2-error" role="alert" style="display: none;">Campo requerido.</div>
                   </div>
                 </li>
                 <li class="m-1 p-1">
                   <div class="col-12">
-                    <label class="visually-hidden" for="autoSizingSelect">Preference</label>
-                    <select class="form-select" id="autoSizingSelect">
-                      <option selected>-Seleccione-</option>
+                    <label class="visually-hidden" for="autoSizingSelect3">Preference</label>
+                    <select class="form-select" id="autoSizingSelect3" name="autoSizingSelect3">
+                      <option selected disabled>-Seleccione-</option>
                       <option value="1">Internet de las Cosas</option>
                       <option value="2">Web semántica</option>
                       <option value="3">Seguridad en Dispositivos móviles</option>
                     </select>
+                    <div class="alert alert-danger p-1" id="autoSizingSelect3-error" role="alert" style="display: none;">Campo requerido.</div>
                   </div>
                 </li>
                 </ol>
@@ -228,6 +231,7 @@
 
     <!--SCRIPTS-->
     <script src="../js/jquery360/jquery360.js"></script>
+    <script src="../js/validator.js"></script>
     <script src="../js/my_jquery_functions.js"></script>
 </body>
 
