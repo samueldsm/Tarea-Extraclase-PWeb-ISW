@@ -27,13 +27,16 @@
           </div>
           <div class="col-md-10 mx-auto col-lg-5">
               
-            <form class="p-4 p-md-5 border rounded-3 bg-light" action="es/principal.html" name="form">
+            <form class="p-4 p-md-5 border rounded-3 bg-light needs-validation" action="es/principal.html" name="form">
               <div class="form-floating mb-3">
-                <input type="text" class="form-control " id="sistemaseguridadusuario" placeholder="usuario">
+                <input type="text" class="form-control " id="sistemaseguridadusuario" placeholder="usuario" required>
                 <label for="sistema-seguridad-usuario">Usuario</label>
+                <div class="valid-tooltip">
+                  Looks good!
+                </div>
               </div>
               <div class="form-floating mb-3">
-                <input type="password" class="form-control" id="sistemaseguridadcontrasenna" placeholder="Password">
+                <input type="password" class="form-control" id="sistemaseguridadcontrasenna" placeholder="Password" required>
                 <label for="sistema-seguridad-contrasenna">Contraseña</label>
               </div>
               <div class="checkbox mb-3">
@@ -54,6 +57,7 @@
       <!--<script src="/js/funciones.js"></script> -->
       <script src="js/jquery360/jquery360.js"></script> 
      <script src="js/my_jquery_functions.js"></script> 
+     <script src="js/validatorbootstrap.js"></script> 
 
 
 

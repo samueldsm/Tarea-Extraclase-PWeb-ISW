@@ -131,24 +131,156 @@
                       </button>
                       <!-- Modal INSERTAR Button -->
                   <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-scrollable">
+                    <div class="modal-dialog modal-dialog-scrollable modal-xl">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Insertar</h5>
+                          <h5 class="modal-title" id="exampleModalLabel">Insertar un grupo</h5>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
+                          <div class="row">
+                          <div class="col-4">
+                          <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label">Asignatura:</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre de la asignatura">
+                          </div>
+                          <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">Grupo:</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="0-100">
+                          </div>
+                          <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label">Matrícula:</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="0-100">
+                          </div>
+                          <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">Profesor:</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre del profesor">
+                          </div>
+                          <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label">Local:</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Aula">
+                          </div>
                           
+                        </div>
+                        <!--PART OF MODAL INSERTAR GRUPO-->
+                        <div class="col-4">
+                          <h5>Listado de estudiantes del grupo:</h5>
+
+                          <div class="dropdown mt-3 small">
+                            
+                            <ol class="list-group list-group-numbered ">
+                              <li class="list-group-item">Elizabeth Losa Pérez</li>
+                              <li class="list-group-item">Elizabeth Losa Pérez</li>
+                              <li class="list-group-item">Elizabeth Losa Pérez</li>
+                              <li class="list-group-item">Elizabeth Losa Pérez</li>
+                              <li class="list-group-item">Elizabeth Losa Pérez</li>
+                              <li class="list-group-item">Elizabeth Losa Pérez</li>
+                              <li class="list-group-item">Anabel Martínez Reina</li>
+                              <li class="list-group-item">Anabel Martínez Reina</li>
+                              <li class="list-group-item">Anabel Martínez Reina</li>
+                              <li class="list-group-item">Anabel Martínez Reina</li>
+                              <li class="list-group-item">Anabel Martínez Reina</li>
+                              <li class="list-group-item">Samuel David Santiesteban Macias</li>
+                              <li class="list-group-item">Samuel David Santiesteban Macias</li>
+                              <li class="list-group-item">Samuel David Santiesteban Macias</li>
+            
+                              
+                            </ol>
+                          </div>
+
+                        </div>
+                        
+                          <div class="col-4">
+                            <div class="row mb-5">
+                            <div class="col-10 small">
+                              <!--buscar-->
+                            <form class=" col-lg-12 mt-1 mb-lg-0 me-lg-3">
+                              <input type="search" class="form-control" placeholder="Nombre, apellidos, asignatura, Usuario" aria-label="Search">                             
+                            </div>
+                            <div class="col-2 ">
+                              <button type="button" class="btn small">
+                                <img class="" src="../imag/bootstrap-icons/search.svg" alt="Buscar" width="20" height="20">
+                             
+                                </button>
+                                </div>
+                                 <!--FILTRADO-->
+                                <div class="row mt-2">
+                                  
+                                  <div class="col-5 text-end small mt-1"><p >Filtrar b&uacute;squeda</p></div>
+                                  <div class="col-5 ">
+                                  <select class="form-select form-select-sm" aria-label=".form-select-sm example ">
+                                    <option selected>-Seleccionar-</option>
+                                    <option value="1">Nombre</option>
+                                    <option value="2">Apellidos</option>
+                                    <option value="3">Usuario</option>
+                                    <option value="4">Profesor</option>
+                                    <option value="5">Asignatura</option>
+                                    <option value="6">Local</option>
+
+                                </select>
+                                  </div>
+                                  <div class="col-2"></div>
+                                
+                                </div>
+
+                            </div>
+                            <!--Tabla fade para buscar estudiantes-->
+                            <div class="row p-1 fade">
+                              <table class="table table-sm p-1 table-hover text-center">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">#</th>
+                                      <th scope="col">Nombre</th>
+                                      <th scope="col">Apellidos</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody id="campos">
+                                    <tr>
+                                      <th scope="row">1</th>
+                                      <td>Mark</td>
+                                      <td>Santiesteban</td>
+          
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">2</th>
+                                      <td>Jacob</td>
+                                      <td>3</td>
+                                     
+                                    <tr>
+                                      <th scope="row">3</th>
+                                      <td >Larry the Bird</td>
+                                      <td > 5</td>
+                                      </tr>
+                                    <th scope="row">4</th>
+                                    <td>Mark</td>
+                                    <td>1</td>
+                                    </tr>
+                                  <tr>
+                                    <th scope="row">5</th>
+                                    <td>Jacob</td>
+                                    <td>4</td>
+                                    </tr>
+                                </tbody>  
+                            </table><!--FIN TABLA-->
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end ">
+                              <button type="button" class="btn btn-success ">Añadir a la lista</button>
+                              </div>
+                            </div>
+                            
+                            </div>
+                        
+                       
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
                           <button type="button" class="btn btn-primary">Guardar</button>
                         </div>
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                    <!--boton modificar-->
+                    <!--boton modificar-------------------------------------------------------------------->
                   <button type="button" class="btn rounded-circle" title="Modificar grupo" data-bs-toggle="modal" data-bs-target="#updateModal">
 
                     <img class=" m-1" src="../imag/bootstrap-icons/pen.svg" alt="Modificar" width="24" height="24">
@@ -156,24 +288,155 @@
                     </button>
 
                     <!-- Modal Modificar Button-->
-                  <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-scrollable">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Modificar</h5>
-                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                        
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                          <button type="button" class="btn btn-primary">Guardar</button>
+                    <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-scrollable modal-xl">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modificar grupo</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="row">
+                            <div class="col-4">
+                            <div class="mb-3">
+                              <label for="formGroupExampleInput" class="form-label">Asignatura:</label>
+                              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre de la asignatura">
+                            </div>
+                            <div class="mb-3">
+                              <label for="formGroupExampleInput2" class="form-label">Grupo:</label>
+                              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="0-100">
+                            </div>
+                            <div class="mb-3">
+                              <label for="formGroupExampleInput" class="form-label">Matrícula:</label>
+                              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="0-100">
+                            </div>
+                            <div class="mb-3">
+                              <label for="formGroupExampleInput2" class="form-label">Profesor:</label>
+                              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Nombre del profesor">
+                            </div>
+                            <div class="mb-3">
+                              <label for="formGroupExampleInput" class="form-label">Local:</label>
+                              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Aula">
+                            </div>
+                            
+                          </div>
+                          <!--PART OF MODAL INSERTAR GRUPO-->
+                          <div class="col-4">
+                            <h5>Listado de estudiantes del grupo:</h5>
+  
+                            <div class="dropdown mt-3 small">
+                              
+                              <ol class="list-group list-group-numbered ">
+                                <li class="list-group-item">Elizabeth Losa Pérez</li>
+                                <li class="list-group-item">Elizabeth Losa Pérez</li>
+                                <li class="list-group-item">Elizabeth Losa Pérez</li>
+                                <li class="list-group-item">Elizabeth Losa Pérez</li>
+                                <li class="list-group-item">Elizabeth Losa Pérez</li>
+                                <li class="list-group-item">Elizabeth Losa Pérez</li>
+                                <li class="list-group-item">Anabel Martínez Reina</li>
+                                <li class="list-group-item">Anabel Martínez Reina</li>
+                                <li class="list-group-item">Anabel Martínez Reina</li>
+                                <li class="list-group-item">Anabel Martínez Reina</li>
+                                <li class="list-group-item">Anabel Martínez Reina</li>
+                                <li class="list-group-item">Samuel David Santiesteban Macias</li>
+                                <li class="list-group-item">Samuel David Santiesteban Macias</li>
+                                <li class="list-group-item">Samuel David Santiesteban Macias</li>
+              
+                                
+                              </ol>
+                            </div>
+  
+                          </div>
+                          
+                            <div class="col-4">
+                              <div class="row mb-5">
+                              <div class="col-10 small">
+                                <!--buscar-->
+                              <form class=" col-lg-12 mt-1 mb-lg-0 me-lg-3">
+                                <input type="search" class="form-control" placeholder="Nombre, apellidos, asignatura, Usuario" aria-label="Search">                             
+                              </div>
+                              <div class="col-2 ">
+                                <button type="button" class="btn small">
+                                  <img class="" src="../imag/bootstrap-icons/search.svg" alt="Buscar" width="20" height="20">
+                               
+                                  </button>
+                                  </div>
+                                   <!--FILTRADO-->
+                                  <div class="row mt-2">
+                                    
+                                    <div class="col-5 text-end small mt-1"><p >Filtrar b&uacute;squeda</p></div>
+                                    <div class="col-5 ">
+                                    <select class="form-select form-select-sm" aria-label=".form-select-sm example ">
+                                      <option selected>-Seleccionar-</option>
+                                      <option value="1">Nombre</option>
+                                      <option value="2">Apellidos</option>
+                                      <option value="3">Usuario</option>
+                                      <option value="4">Profesor</option>
+                                      <option value="5">Asignatura</option>
+                                      <option value="6">Local</option>
+  
+                                  </select>
+                                    </div>
+                                    <div class="col-2"></div>
+                                  
+                                  </div>
+  
+                              </div>
+                              <!--Tabla fade para buscar estudiantes-->
+                              <div class="row p-1 fade">
+                                <table class="table table-sm p-1 table-hover text-center">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Apellidos</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody id="campos">
+                                      <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Santiesteban</td>
+            
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>3</td>
+                                       
+                                      <tr>
+                                        <th scope="row">3</th>
+                                        <td >Larry the Bird</td>
+                                        <td > 5</td>
+                                        </tr>
+                                      <th scope="row">4</th>
+                                      <td>Mark</td>
+                                      <td>1</td>
+                                      </tr>
+                                    <tr>
+                                      <th scope="row">5</th>
+                                      <td>Jacob</td>
+                                      <td>4</td>
+                                      </tr>
+                                  </tbody>  
+                              </table><!--FIN TABLA-->
+                              <div class="d-grid gap-2 d-md-flex justify-content-md-end ">
+                                <button type="button" class="btn btn-success ">Añadir a la lista</button>
+                                </div>
+                              </div>
+                              
+                              </div>
+                          
+                         
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Guardar</button>
+                          </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
 
                         <!--        ------------       -->
                         <!-- Button trigger modal DELETE-->
@@ -249,7 +512,7 @@
                         <tr>
                           <th scope="col">#</th>
                           <th scope="col">Asignatura</th>
-                          <th scope="col">Facultad</th>
+                          <th scope="col">Grupo</th>
                           <th scope="col">Profesor</th>
                           <th scope="col">Local</th>
                           <th scope="col">Estudiantes</th>
@@ -259,41 +522,43 @@
                         <tr>
                           <th scope="row">1</th>
                           <td>Mark</td>
-                          <td>Otto</td>
+                          <td>2</td>
                           <td>@mdo</td>
                           <td>Mark</td>
-                          <td><a title="Ver" href="#">(18)</a></td>
+                          <td><a class="" title="Ver" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                            (21)
+                          </a></td>
                         </tr>
                         <tr>
                           <th scope="row">2</th>
                           <td>Jacob</td>
-                          <td>Thornton</td>
+                          <td>3</td>
                           <td>@fat</td>
                           <td>Mark</td>
-                          <td><a title="Ver" href="#">(19)</a></td>
+                          <td><a title="Ver" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">(19)</a></td>
                         </tr>
                         <tr>
                           <th scope="row">3</th>
                           <td >Larry the Bird</td>
-                          <td > Bird</td>
+                          <td > 5</td>
                           <td>@twitter</td>
                           <td>Mark</td>
-                          <td><a title="Ver" href="#">(30)</a></td>
+                          <td><a title="Ver" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">(30)</a></td>
                         </tr>
                         <th scope="row">4</th>
                         <td>Mark</td>
-                        <td>Otto</td>
+                        <td>1</td>
                         <td>@mdo</td>
                         <td>Mark</td>
-                        <td><a title="Ver" href="#">(15)</a></td>
+                        <td><a title="Ver" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">(15)</a></td>
                       </tr>
                       <tr>
                         <th scope="row">5</th>
                         <td>Jacob</td>
-                        <td>Thornton</td>
+                        <td>4</td>
                         <td>@fat</td>
                         <td>Mark</td>
-                        <td><a title="Ver" href="#">(23)</a></td>
+                        <td><a title="Ver" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">(23)</a></td>
                       </tr>
                     </tbody>  
                 </table><!--FIN TABLA-->
@@ -301,6 +566,40 @@
               </div>
             </div>
           </div><!--end Col 10-->
+    
+          
+          
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Estudiantes</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div>
+                <p>Lista de estudiantes del grupo<span> 2 </span> </p>
+              </div>
+              <div class="dropdown mt-3 small">
+                <ol class="list-group list-group-numbered ">
+                  <li class="list-group-item">Elizabeth Losa Pérez</li>
+                  <li class="list-group-item">Elizabeth Losa Pérez</li>
+                  <li class="list-group-item">Elizabeth Losa Pérez</li>
+                  <li class="list-group-item">Elizabeth Losa Pérez</li>
+                  <li class="list-group-item">Elizabeth Losa Pérez</li>
+                  <li class="list-group-item">Elizabeth Losa Pérez</li>
+                  <li class="list-group-item">Anabel Martínez Reina</li>
+                  <li class="list-group-item">Anabel Martínez Reina</li>
+                  <li class="list-group-item">Anabel Martínez Reina</li>
+                  <li class="list-group-item">Anabel Martínez Reina</li>
+                  <li class="list-group-item">Anabel Martínez Reina</li>
+                  <li class="list-group-item">Samuel David Santiesteban Macias</li>
+                  <li class="list-group-item">Samuel David Santiesteban Macias</li>
+                  <li class="list-group-item">Samuel David Santiesteban Macias</li>
+
+                  
+                </ol>
+              </div>
+            </div>
+          </div>
         </div>
           <!--row principal-->
         </div>

@@ -3,12 +3,21 @@
 
 $(document).ready(function(){
 
-  $("#delete").click(function(){
+ /* $("#delete").click(function(){
 
     $("tbody tr td").empty();
-  }); 
+  }); */
+  /*$("#delete").click(function(){
+    $("tr th").empty();
 
-  
+   alert( $("#flexCheckChecked") ) 
+
+      
+    
+    
+  });*/
+
+
   //Validar selección de asignaturas optativas
   $(document).on('submit', 'form#asignaturas', () => {
     let primero = validator.getValueSelect("autoSizingSelect1"), 
