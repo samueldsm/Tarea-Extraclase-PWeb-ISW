@@ -27,18 +27,24 @@
           </div>
           <div class="col-md-10 mx-auto col-lg-5">
               
-            <form class="p-4 p-md-5 border rounded-3 bg-light needs-validation" action="es/principal.html" name="form">
-              <div class="form-floating mb-3">
+            <form class="p-4 p-md-5 border rounded-3 bg-light needs-validation" action="es/principal.html" name="form" novalidate>
+              <div class="form-floating mb-5 position-relative">
+                
                 <input type="text" class="form-control " id="sistemaseguridadusuario" placeholder="usuario" required>
                 <label for="sistema-seguridad-usuario">Usuario</label>
-                <div class="valid-tooltip">
-                  Looks good!
+                <div class="invalid-tooltip">
+                  Por favor, entre un nombre de usuario.
                 </div>
               </div>
-              <div class="form-floating mb-3">
-                <input type="password" class="form-control" id="sistemaseguridadcontrasenna" placeholder="Password" required>
+              <div class="form-floating mb-4">
+                <input type="password" class="form-control" id="sistemaseguridadcontrasenna" placeholder="Contraseña" required>
                 <label for="sistema-seguridad-contrasenna">Contraseña</label>
+                <div class="invalid-tooltip">
+                  Por favor, entre una contraseña.
+                </div>
               </div>
+              
+              
               <div class="checkbox mb-3">
                 <label>
                   <input type="checkbox" value="remember-me"> Recordarme

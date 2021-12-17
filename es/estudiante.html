@@ -11,8 +11,8 @@
 
     <title>Seleccionar Asignatura Optativa | SGAOpta</title>
 
-    <script src="../js/bootstrap5-js/bootstrap.bundle.min.js"></script>    
-    <script src="../js/bootstrap5-js/popper.min.js"></script> 
+   
+     
     
 </head>
 <body>
@@ -62,7 +62,7 @@
   </header>
       
           <!--Principal Section -->
-      <div class="container-fluid pb-3 mt-1 mb-5 p-2">
+      <div class="container-fluid pb-3 mt-1 mb-5">
         <div class="row bg-light">
           <!--Aside-->
           <div class="col-2">
@@ -96,48 +96,60 @@
             <div class=" border-top border-bottom rounded-3">
               <div class="container mt-5">
                 <div class="h5 text-center mb-5">Seleccione las asignaturas en el orden de su preferencia:</div>
-              
+                
 
-                <form class="row gy-2 gx-3 align-items-center" id="asignaturas">
-                  <ol>
-                  <li class="m-1 p-1"><div class="col-12">
+                <form class="row gy-2 gx-3 align-items-center needs-validation" novalidate id="">                                    <ol>
+                  <li class="m-3 p-1">
+                    <div class="col-12 position-relative">
                     <label class="visually-hidden" for="autoSizingSelect1">Preference</label>
-                    <select class="form-select" id="autoSizingSelect1" name="autoSizingSelect1">
-                      <option selected disabled>-Seleccione-</option>
+                    <select class="form-select" id="autoSizingSelect1" name="autoSizingSelect1" required>
+                      <option selected disabled value="">-Seleccione-</option>
                       <option value="1">Internet de las cosas</option>
                       <option value="2">Web semántica</option>
                       <option value="3">Seguridad en dispositivos móviles</option>
                     </select>
+                    <div class="invalid-tooltip">
+                      Por favor, seleccione una opción.
+                    </div>
                     <div class="alert alert-danger p-1" id="autoSizingSelect1-error" role="alert" style="display: none;">Campo requerido.</div>
+                    
                   </div>
                 </li>
-                  <li class="m-1 p-1"> <div class="col-12">
+                  <li class="m-3 p-1"> 
+                    <div class="col-12 position-relative">
                     <label class="visually-hidden" for="autoSizingSelect2">Preference</label>
-                    <select class="form-select" id="autoSizingSelect2" name="autoSizingSelect2">
-                      <option selected disabled>-Seleccione-</option>
+                    <select class="form-select" id="autoSizingSelect2" name="autoSizingSelect2" required>
+                      <option selected disabled value="">-Seleccione-</option>
                       <option value="1">Internet de las Cosas</option>
                       <option value="2">Web semántica</option>
                       <option value="3">Seguridad en Dispositivos móviles</option>
                     </select>
+                    <div class="invalid-tooltip">
+                      Por favor, seleccione una opción.
+                    </div>
                     <div class="alert alert-danger p-1" id="autoSizingSelect2-error" role="alert" style="display: none;">Campo requerido.</div>
+                 
                   </div>
                 </li>
-                <li class="m-1 p-1">
-                  <div class="col-12">
-                    <label class="visually-hidden" for="autoSizingSelect3">Preference</label>
-                    <select class="form-select" id="autoSizingSelect3" name="autoSizingSelect3">
-                      <option selected disabled>-Seleccione-</option>
+                <li class="m-3 p-1">
+                  <div class="col-12 position-relative">
+                    <label class="visually-hidden" for="autoSizingSelect3">Preferencia</label>
+                    <select class="form-select" id="autoSizingSelect3" name="autoSizingSelect3" required>
+                      <option selected disabled value="">-Seleccione-</option>
                       <option value="1">Internet de las Cosas</option>
                       <option value="2">Web semántica</option>
                       <option value="3">Seguridad en Dispositivos móviles</option>
                     </select>
-                    <div class="alert alert-danger p-1" id="autoSizingSelect3-error" role="alert" style="display: none;">Campo requerido.</div>
-                  </div>
+                    <div class="invalid-tooltip">
+                      Por favor, seleccione una opción.
+                    </div>
+                    <!--<div class="alert alert-danger p-1" id="autoSizingSelect3-error" role="alert" style="display: none;">Campo requerido.</div>
+                    --></div>
                 </li>
                 </ol>
                 <div class="col-10"></div>
                   <div class="col-2 pb-5 ">
-                    <button type="submit" class="btn btn-primary" id="liveToastBtn">Aceptar</button>
+                    <button type="submit" class="btn btn-primary" id="">Aceptar</button><!--id liveToastBtn-->
                   </div>
                 </form >
 
@@ -231,8 +243,9 @@
 
     <!--SCRIPTS-->
     <script src="../js/jquery360/jquery360.js"></script>
-    <script src="../js/validator.js"></script>
+    <!--<script src="../js/validator.js"></script>-->
     <script src="../js/my_jquery_functions.js"></script>
+    <script src="../js/validatorbootstrap.js"></script>
 </body>
 
 </html>

@@ -104,24 +104,32 @@
                   <div class="modal fade" id="createModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-scrollable">
                       <div class="modal-content">
+                        <form class="needs-validation " novalidate>
                         <div class="modal-header">
                           <h5 class="modal-title" id="exampleModalLabel">Registrar una asignatura optativa</h5>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <div class="mb-3">
+                          <div class="mb-4 position-relative">
                             <label for="formGroupExampleInput" class="form-label">Nombre de la asignatura</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre de la asignatura">
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre de la asignatura" required>
+                            <div class="invalid-tooltip">
+                             Por favor, escriba un nombre para la asignatura.
+                            </div>
                           </div>
-                          <div class="mb-3">
+                          <div class="mb-4 position-relative">
                             <label for="formGroupExampleInput2" class="form-label">Matrícula</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="0-100">
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="0-100" required>
+                            <div class="invalid-tooltip">
+                              Por favor, escriba la matrícula del grupo (0-100).
+                            </div>
                           </div>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                          <button type="button" class="btn btn-primary">Guardar</button>
+                          <button type="submit" class="btn btn-primary" id="btnappend">Registrar</button>
                         </div>
+                        </form>
                       </div>
                     </div>
                   </div>
@@ -137,24 +145,32 @@
                     <div class="modal fade" id="updateModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                       <div class="modal-dialog modal-dialog-scrollable">
                         <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modificar una asignatura optativa</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            <div class="mb-3">
-                              <label for="formGroupExampleInput" class="form-label">Nombre de la asignatura</label>
-                              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre de la asignatura">
+                          <form class="needs-validation " novalidate>
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Modificar asignatura optativa</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
-                            <div class="mb-3">
-                              <label for="formGroupExampleInput2" class="form-label">Matrícula</label>
-                              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="0-100">
+                            <div class="modal-body">
+                              <div class="mb-4 position-relative">
+                                <label for="formGroupExampleInput" class="form-label">Nombre de la asignatura</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre de la asignatura" required>
+                                <div class="invalid-tooltip">
+                                 Por favor, escriba un nombre para la asignatura.
+                                </div>
+                              </div>
+                              <div class="mb-4 position-relative">
+                                <label for="formGroupExampleInput2" class="form-label">Matrícula</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="0-100" required>
+                                <div class="invalid-tooltip">
+                                  Por favor, escriba la matrícula del grupo (0-100).
+                                </div>
+                              </div>
                             </div>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button type="button" class="btn btn-primary">Guardar</button>
-                          </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                              <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                            </div>
+                            </form>
                         </div>
                       </div>
                     </div>
@@ -235,7 +251,7 @@
                         <div class="form-check">
                             <tr>
                              <th scope="row">
-                               <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                               <input class="form-check-input" type="checkbox" value="1" id="flexCheckChecked" >
                                 <label class="form-check-label" for="flexCheckChecked"></label>
                               </th>
                         
@@ -245,7 +261,7 @@
 
                             <tr>    
                               <th scope="row">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+                                <input class="form-check-input" type="checkbox" value="2" id="flexCheckChecked" >
                                 <label class="form-check-label" for="flexCheckChecked"></label>
                               </th>
                               <td>Web semántica</td>
@@ -286,6 +302,7 @@
 
     <script src="../js/jquery360/jquery360.js"></script>
     <script src="../js/my_jquery_functions.js"></script>
+    <script src="../js/validatorbootstrap.js"></script>
 
 </body>
 

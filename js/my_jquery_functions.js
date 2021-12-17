@@ -19,7 +19,7 @@ $(document).ready(function(){
 
 
   //Validar selección de asignaturas optativas
-  $(document).on('submit', 'form#asignaturas', () => {
+  /*$(document).on('submit', 'form#asignaturas', () => {
     let primero = validator.getValueSelect("autoSizingSelect1"), 
         segundo = validator.getValueSelect("autoSizingSelect2"), 
         tercero = validator.getValueSelect("autoSizingSelect3"),
@@ -35,8 +35,12 @@ $(document).ready(function(){
     error = validator.validate(validator.isNull(tercero) || validator.isEmpty(tercero), "div#autoSizingSelect3-error");
 
     return !error;
-});
+});*/
   
+
+
+
+
 /* 
     $("login").click(function(){
         //alert("Value: " + $("#sistemaseguridadusuario").val());
