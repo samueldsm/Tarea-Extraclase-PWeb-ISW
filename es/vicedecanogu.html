@@ -134,11 +134,31 @@
                     <div class="modal-dialog modal-dialog-scrollable">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Insertar</h5>
+                          <h5 class="modal-title" id="exampleModalLabel">Registrar un usuario</h5>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
+                        <!--BODY-->
                         <div class="modal-body">
-                          
+                          <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label">Nombre(s)</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Entrar nombre">
+                          </div>
+                          <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">Apellidos</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Entrar apellidos">
+                          </div>
+                          <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label">Usuario</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Entrar nombre de usuario">
+                          </div>
+                          <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">Grupo</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Entrar número de grupo">
+                          </div>
+                          <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label">Nombre de la asignatura</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Entrar nombre de la asignatura">
+                          </div>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -160,12 +180,30 @@
                     <div class="modal-dialog modal-dialog-scrollable">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Modificar</h5>
+                          <h5 class="modal-title" id="exampleModalLabel">Modificar usuario</h5>
                           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-                        
+                          <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label">Nombre(s)</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Entrar nombre">
+                          </div>
+                          <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">Apellidos</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Entrar apellidos">
+                          </div>
+                          <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label">Usuario</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Entrar nombre de usuario">
+                          </div>
+                          <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">Grupo</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Entrar número de grupo">
+                          </div>
+                          <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label">Nombre de la asignatura</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Entrar nombre de la asignatura">
+                          </div>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -177,7 +215,7 @@
 
                         <!--        ------------       -->
                         <!-- Button trigger modal DELETE-->
-                    <button type="button" id="delete" class="btn rounded-circle" title="Eliminar grupo" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                    <button type="button"  class="btn rounded-circle" title="Eliminar grupo" data-bs-toggle="modal" data-bs-target="#deleteModal">
                       <img class=" m-1" src="../imag/bootstrap-icons/trash-fill.svg" alt="Eliminar" width="24" height="24">
                    
                       </button>                  
@@ -187,14 +225,14 @@
                             <div class="modal-content">
                               <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Eliminar</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button  type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                               </div>
                               <div class="modal-body">
                                 ¿Está seguro que desea eliminar el(los) archivo(s) seleccionado(s)?
                               </div>
                               <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                <button id="delete" type="button" class="btn btn-danger">Eliminar</button>
+                                <button id="delete" type="button" class="btn btn-danger" data-bs-dismiss="modal">Eliminar</button>
                               </div>
                             </div>
                           </div>
@@ -243,61 +281,99 @@
                   </div>
 
                   <!--Fila de la Tabla-->
-                <div class="row p-1">
-                  <table class="table table-sm p-1 table-hover text-center">
-                      <thead>
-                        <tr>
-                          <th scope="col">#</th>
-                          <th scope="col">Asignatura</th>
-                          <th scope="col">Facultad</th>
-                          <th scope="col">Profesor</th>
-                          <th scope="col">Local</th>
-                          <th scope="col">Estudiantes</th>
-                        </tr>
-                      </thead>
-                      <tbody id="campos">
-                        <tr>
-                          <th scope="row">1</th>
+                  <div class="row p-1">
+                    <table class="table table-sm p-1 table-hover text-center">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellidos</th>
+                            <th scope="col">Usuario</th>
+                            <th scope="col">Asignatura</th>
+                            <th scope="col">Categoría</th>
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td >Larry the Bird</td>
+                            <td > Bird</td>
+                            <td>@twitter</td>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                          </tr>
+                          <th scope="row">4</th>
                           <td>Mark</td>
                           <td>Otto</td>
                           <td>@mdo</td>
                           <td>Mark</td>
-                          <td><a title="Ver" href="#">(18)</a></td>
+                          <td>Otto</td>
                         </tr>
                         <tr>
-                          <th scope="row">2</th>
+                          <th scope="row">5</th>
                           <td>Jacob</td>
                           <td>Thornton</td>
                           <td>@fat</td>
                           <td>Mark</td>
-                          <td><a title="Ver" href="#">(19)</a></td>
+                          <td>Otto</td>
                         </tr>
                         <tr>
-                          <th scope="row">3</th>
+                          <th scope="row">6</th>
                           <td >Larry the Bird</td>
                           <td > Bird</td>
                           <td>@twitter</td>
                           <td>Mark</td>
-                          <td><a title="Ver" href="#">(30)</a></td>
-                        </tr>
-                        <th scope="row">4</th>
+                          <td>Otto</td>
+                        </tr> <th scope="row">7</th>
                         <td>Mark</td>
                         <td>Otto</td>
                         <td>@mdo</td>
                         <td>Mark</td>
-                        <td><a title="Ver" href="#">(15)</a></td>
+                        <td>Otto</td>
                       </tr>
                       <tr>
-                        <th scope="row">5</th>
+                        <th scope="row">8</th>
                         <td>Jacob</td>
                         <td>Thornton</td>
                         <td>@fat</td>
                         <td>Mark</td>
-                        <td><a title="Ver" href="#">(23)</a></td>
+                        <td>Otto</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">9</th>
+                        <td >Larry the Bird</td>
+                        <td > Bird</td>
+                        <td>@twitter</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                      </tr> 
+                        <th scope="row">10</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
                       </tr>
                     </tbody>  
-                </table><!--FIN TABLA-->
-                </div>
+                  </table><!--FIN TABLA-->
+                  </div>
               </div>
             </div>
           </div><!--end Col 10-->

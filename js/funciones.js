@@ -1,7 +1,9 @@
 function go() {
 
     if (document.form.sistemaseguridadusuario.value == 'usuario' && document.form.sistemaseguridadcontrasenna.value == 'usuario') {
+       
         document.form.submit();
+        
        // falta preventDefault();
         return false;
 
