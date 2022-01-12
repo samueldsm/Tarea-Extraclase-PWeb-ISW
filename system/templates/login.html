@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Autenticarse {% endblock title %}
+{% block bodyclass %} class="bg-primary bg-opacity-10" {% endblock bodyclass %}
+{% block content %}
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+            <div class="col-lg-7 justify-content-between">
+                <h1 class="display-4 fw-bold lh-1 mb-3">
+                    <img class="pb-2 m-1" src="{% static 'imag/bootstrap-icons/journal-bookmark-fill.svg' %}" alt="logo"
+                         width="48" height="48"/> SGAOpta
+                </h1>
+                <p class="col-lg-10 fs-4" style="text-align: justify">
+                    Sistema informático, sustentado en las nuevas tecnologías, que contribuye al proceso de gestión y
+                    almacenamiento de la información de la matrícula de las asignaturas optativas de la Facultad 2 de la
+                    Universidad de las Ciencias Informáticas.
+                </p>
+            </div>
+            <div class="col-md-10 mx-auto col-lg-5 ">
+                <form class="p-4 p-md-5 border rounded-3 bg-light needs-validation shadow" method="POST" novalidate>
+                    {% if error %}
+                        <div class="alert alert-danger" role="alert">
+                            El nombre de usuario o la contraseña son incorrectos. Comprueba que no esté activada la
+                            tecla Bloq Mayús y vuelve a introducir el nombre de usuario y contraseña.
+                        </div>
+                    {% endif %}
+                    <div class="form-floating mb-5 position-relative">
+                        <input type="text" class="form-control" name="user_username" id="sistemaseguridadusuario"
+                               placeholder="usuario" required/>
+                        <label for="sistema-seguridad-usuario">Usuario</label>
+                        <div class="invalid-tooltip">
+                            Por favor, entre un nombre de usuario.
+                        </div>
+                    </div>
+                    <div class="form-floating mb-4">
+                        <input type="password" class="form-control" name="user_password"
+                               id="sistemaseguridadcontrasenna" placeholder="Contraseña" required/>
+                        <label for="sistema-seguridad-contrasenna">Contraseña</label>
+                        <div class="invalid-tooltip">Por favor, entre una contraseña.</div>
+                    </div>
+
+                    <div class="checkbox mb-3">
+                        <label>
+                            <input type="checkbox" name="user_remember"/> Recordarme
+                        </label>
+                    </div>
+                    {% csrf_token %}
+                    <button class="w-100 btn btn-lg btn-primary" type="submit" id="login">
+                        Entrar
+                    </button>
+                    <hr class="my-4"/>
+                    <small class="text-muted">Al autenticarte, estás de acuerdo con los terminos de uso.</small
+                    >
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

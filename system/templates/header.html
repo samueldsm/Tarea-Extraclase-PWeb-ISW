@@ -1,0 +1,98 @@
+{% load static %}
+<!--Cabecera-->
+<header class="p-1 mb-3 border-bottom border-3 bg-light rounded-bottom ">
+    <div class="container-fluid">
+        <div class="d-flex flex-wrap align-items-center justify-content-between ">
+            <ul class="nav col-2 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                {% comment %}
+			<li>
+				<a href="login" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+				  <img class="p-1 m-1" src=" {% static  'imag/bootstrap-icons/house-door.svg' %}" alt="Bootstrap" width="32" height="32">
+				</a>
+			</li>
+			{% endcomment %}
+                <li><a href="/principal" class=" h3 nav-link px-2 link-secondary">SGAOpta</a></li>
+            </ul>
+            <!--buscar
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+              <input type="search" class="form-control" placeholder="Buscar..." aria-label="Search">-->
+            <ul class="nav mb-2 me-2  mb-md-0 text-end">
+                <li><a href="/ayuda" class="d-flex align-items-center me-2 mb-2 mb-lg-0 text-dark text-decoration-none">
+                    <img class="p-1 mb-1  " src=" {% static  'imag/bootstrap-icons/question-circle.svg' %}"
+                         alt="Bootstrap" width="32" height="32">
+                </a></li>
+                <!--user-->
+                <li>
+                    <div class="dropdown text-end">
+                        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src=" {% static  'imag/bootstrap-icons/person.svg' %}" alt="usuario"
+                                 class="rounded-circle" width="32" height="32">
+                        </a>
+                        <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="/logout" id="logout">Desconectarse</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+{% comment %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">SGAOpta</a>
+    <div>
+      <ul
+        class="d-flex me-auto my-2 my-lg-0"
+        style="--bs-scroll-height: 100px; list-style: none;"
+      >
+        <li class="me-3">
+          <a
+            href="#"
+            class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none"
+          >
+            <img
+              class="p-1 mb-1"
+              src=" {% static  'imag/bootstrap-icons/question-circle.svg' %}"
+              alt="Bootstrap"
+              width="32"
+              height="32"
+            />
+          </a>
+        </li>
+        <li>
+          <div class="dropdown text-end">
+            <a
+              href="#"
+              class="d-block link-dark text-decoration-none dropdown-toggle"
+              id="dropdownUser1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src=" {% static  'imag/bootstrap-icons/person.svg' %}"
+                alt="usuario"
+                class="rounded-circle"
+                width="32"
+                height="32"
+              />
+            </a>
+            <ul
+              class="dropdown-menu text-small"
+              aria-labelledby="dropdownUser1"
+            >
+              <li>
+                <a class="dropdown-item" href="login.html" id="logout"
+                  >Desconectarse</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endcomment %}

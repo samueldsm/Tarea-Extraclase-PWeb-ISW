@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block styles %}
+    <link href=" {% static 'css/sidebar.css' %}" rel="stylesheet"/>
+{% endblock styles %}
+
+{% block title %}
+    Principal
+{% endblock title %}
+
+{% block content %}
+
+
+    <!--Cabecera-->
+
+    {% include "header.html" %}
+
+    <!--Principal Section -->
+    <div class="container pb-3 mt-5 mb-5 bg-white">
+        <div class="row m-5">
+            <div class="col-12"></div>
+        </div>
+        <div class="row justify-content-center">
+            <!--Opciones-->
+            <div class="col-12 col-lg-4">
+                <div class=" rounded-3 m-2">
+
+                    <div id="estudiantepanel" class="flex-shrink-0 p-3 bg-light shadow border-bottom border-5 rounded-3"
+                         style="width: 300px;">
+                        <a href="/estudiante"
+                           class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none ">
+                            <img class="p-1 m-1" src="{% static 'imag/bootstrap-icons/pencil.svg' %}" alt="users"
+                                 width="32" height="32">
+                            <span class="fs-6 fw-semibold ">Estudiante</span>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="col-12  col-lg-4 ">
+                <div class=" rounded-3 m-2 ">
+
+                    <div id="jdepartamentopanel"
+                         class="flex-shrink-0 p-3 bg-light shadow border-bottom border-5 rounded-3 "
+                         style="width: 300px;">
+                        <a href="/jefedepto"
+                           class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none ">
+                            <img class="p-1 m-1" src="{% static 'imag/bootstrap-icons/journal-text.svg' %}" alt="users"
+                                 width="32" height="32">
+                            <span class="fs-6 fw-semibold text-center">Jefe de departamento</span>
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="col-12  col-lg-4">
+                <div class=" rounded-3 m-2">
+
+                    <div id="vdecanopanel" class="flex-shrink-0 p-3 bg-light shadow border-bottom border-5 rounded-3"
+                         style="width: 300px;">
+                        <a href="/vicedecano"
+                           class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none ">
+                            <img class="p-1 m-1" src="{% static 'imag/bootstrap-icons/gear.svg' %}" alt="users"
+                                 width="32" height="32">
+                            <span class="fs-6 fw-semibold text-center">Vicedecano</span>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    {% include "footer.html" %}
+
+
+
+{% endblock content %}
+
+{% block scripts %}
+    <script src="{% static 'js/bootstrap5-js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/jquery360/jquery360.js' %}"></script>
+    <script src="{% static 'js/my_jquery_functions.js' %}"></script>
+
+
+{% endblock scripts %}

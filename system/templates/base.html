@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap5-css/bootstrap.min.css' %}">
+
+    {% block styles %}{% endblock styles %}
+
+    <title>
+        {% block title %}{% endblock title %} | SGAOpta
+    </title>
+</head>
+<body {% block bodyclass %}{% endblock bodyclass %}>
+{% block content %}{% endblock content %}
+<!--SCRIPTS-->
+<!--<script src="/js/funciones.js"></script> -->
+<script src="{% static 'js/jquery360/jquery360.js' %}"></script>
+<script src="{% static 'js/my_jquery_functions.js' %}"></script>
+<script src="{% static 'js/validatorbootstrap.js' %}"></script>
+{% block scripts %}{% endblock scripts %}
+</body>
+</html>

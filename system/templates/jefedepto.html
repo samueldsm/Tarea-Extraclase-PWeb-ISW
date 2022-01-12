@@ -1,0 +1,296 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block styles %}
+    <link href=" {% static 'css/sidebar.css' %}" rel="stylesheet"/>
+{% endblock styles %}
+
+{% block title %}
+    Jefe Depto
+{% endblock title %}
+
+{% block content %}
+
+
+    <!--Cabecera-->
+
+    {% include "header.html" %}
+
+    <!--Principal Section -->
+    <div class="container-fluid pb-3 mt-1 mb-5  bg-light">
+        <div class="row ">
+            <!--Aside-->
+            <div class="col-12 col-lg-2">
+                <div class=" rounded-3 m-2">
+                    <div class="flex-shrink-0 p-3 bg-white " style="width: 200px;">
+                        <a href="/"
+                           class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom ">
+                            <img class="p-1 m-1" src="{% static 'imag/bootstrap-icons/journal-text.svg' %}"
+                                 alt="Bootstrap" width="32" height="32">
+                            <span class="fs-6 fw-semibold text-center">Gestionar Asignaturas</span>
+                        </a>
+                        <!--
+                        <ul class="list-unstyled ps-0  border-bottom">
+
+                          <li class="mb-1">
+                            <button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                              Opciones
+                            </button>
+                            <div class="collapse show" id="home-collapse" >
+                              <ul class="btn-toggle-nav  list-unstyled fw-normal pb-1 small">
+                                <li><a href="#" class="link-dark rounded">Insertar</a></li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                        -->
+                    </div>
+                </div>
+            </div>
+
+            <!--CRUD-->
+            <div class="col-12 col-lg-10">
+                <div class=" border rounded-3">
+                    <div class="container mt-2 ">
+                        <!--BOTONES CRUD-->
+                        <div class="row">
+
+                            <div class="col-4">
+                                <button type="button" class="btn rounded-circle" title="Insertar grupo"
+                                        data-bs-toggle="modal" data-bs-target="#createModal1">
+                                    <img class=" m-1" src="{% static 'imag/bootstrap-icons/plus-circle.svg' %}"
+                                         alt="Insertar" width="24" height="24">
+
+                                </button>
+                                <!-- Modal INSERTAR Button -->
+                                <div class="modal fade" id="createModal1" tabindex="-1"
+                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-scrollable">
+                                        <div class="modal-content">
+                                            <form class="needs-validation " novalidate>
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Registrar una
+                                                        asignatura optativa</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="mb-4 position-relative">
+                                                        <label for="name_asig" class="form-label">Nombre de la
+                                                            asignatura</label>
+                                                        <input type="text" class="form-control" value="" id="name_asig"
+                                                               placeholder="Nombre de la asignatura" required>
+                                                        <div class="invalid-tooltip">
+                                                            Por favor, escriba un nombre para la asignatura.
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-4 position-relative">
+                                                        <label for="asig_matr" class="form-label">Matrícula</label>
+                                                        <input type="number" value="" class="form-control"
+                                                               id="asig_matr" placeholder="0-100" required>
+                                                        <div class="invalid-tooltip">
+                                                            Por favor, escriba un número con la matrícula del grupo.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">Cancelar
+                                                    </button>
+                                                    <button type="submit" class="btn btn-primary" id="btnappend">
+                                                        Registrar
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--boton modificar-->
+                                <button type="button" class="btn rounded-circle" title="Modificar grupo"
+                                        data-bs-toggle="modal" data-bs-target="#updateModal1">
+
+                                    <img class=" m-1" src="{% static 'imag/bootstrap-icons/pen.svg' %}" alt="Modificar"
+                                         width="24" height="24">
+
+                                </button>
+
+                                <!-- Modal Modificar Button-->
+                                <div class="modal fade" id="updateModal1" tabindex="-1"
+                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-scrollable">
+                                        <div class="modal-content">
+                                            <form class="needs-validation " novalidate>
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Modificar asignatura
+                                                        optativa</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="mb-4 position-relative">
+                                                        <label for="formGroupExampleInput" class="form-label">Nombre de
+                                                            la asignatura</label>
+                                                        <input type="text" class="form-control"
+                                                               id="formGroupExampleInput"
+                                                               placeholder="Nombre de la asignatura" required>
+                                                        <div class="invalid-tooltip">
+                                                            Por favor, escriba un nombre para la asignatura.
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-4 position-relative">
+                                                        <label for="formGroupExampleInput2"
+                                                               class="form-label">Matrícula</label>
+                                                        <input type="number" class="form-control"
+                                                               id="formGroupExampleInput2" placeholder="0-100" required>
+                                                        <div class="invalid-tooltip">
+                                                            Por favor, escriba un número con la matrícula del grupo.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                            data-bs-dismiss="modal">Cancelar
+                                                    </button>
+                                                    <button type="submit" class="btn btn-primary">Guardar cambios
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!-- Button trigger modal DELETE-->
+                                <button type="button" id="delete" class="btn rounded-circle" title="Eliminar grupo"
+                                        data-bs-toggle="modal" data-bs-target="#deleteModal1">
+                                    <img class=" m-1" src="{% static 'imag/bootstrap-icons/trash-fill.svg' %}"
+                                         alt="Eliminar" width="24" height="24">
+
+                                </button>
+                                <!-- Modal Eliminar -->
+                                <div class="modal fade" id="deleteModal1" tabindex="-1"
+                                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Eliminar</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                ¿Está seguro que desea eliminar el(los) archivo(s) seleccionado(s)?
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                                    Cancelar
+                                                </button>
+                                                <button id="delete" type="button" class="btn btn-danger"
+                                                        data-bs-dismiss="modal">Eliminar
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-7 ">
+                                <!--buscar-->
+                                <form class=" col-lg-12 mt-1 mb-lg-0 me-lg-3">
+                                    <input type="search" class="form-control" placeholder="Asignatura, matrícula"
+                                           aria-label="Search">
+
+
+                            </div>
+                            <div class="col-1 ">
+                                <button type="button" class="btn">
+                                    <img class="" src="{% static 'imag/bootstrap-icons/search.svg' %}" alt="Buscar"
+                                         width="24" height="24">
+
+                                </button>
+                            </div>
+
+
+                        </div>
+
+                        <!--FILTRADO-->
+                        <div class="row">
+                            <div class="col-7"></div>
+                            <div class="col-2 text-end small mt-1"><p>Filtrar b&uacute;squeda</p></div>
+                            <div class="col-2">
+                                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                    <option selected>-Seleccionar-</option>
+                                    <option value="1">Asignatura</option>
+                                    <option value="2">Matrícula</option>
+
+                                </select>
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+
+                        <!--Fila de la Tabla-->
+                        <div class="row p-1 ">
+                            <table class="table table-sm p-1 table-hover text-center" id="my_table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                                        <label class="form-check-label" for="flexCheckChecked"></label>
+                                    </th>
+                                    <th scope="col">Asignatura</th>
+                                    <th scope="col">Matrícula</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <div class="form-check">
+                                    <tr>
+                                        <th scope="row">
+                                            <input class="form-check-input" type="checkbox" value="1"
+                                                   id="flexCheckChecked">
+                                            <label class="form-check-label" for="flexCheckChecked"></label>
+                                        </th>
+
+                                        <td>Internet de las cosas</td>
+                                        <td>50</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">
+                                            <input class="form-check-input" type="checkbox" value="2"
+                                                   id="flexCheckChecked">
+                                            <label class="form-check-label" for="flexCheckChecked"></label>
+                                        </th>
+                                        <td>Web semántica</td>
+                                        <td>43</td>
+
+
+                                    </tr>
+                                </div>
+
+                                </tbody>
+                            </table><!--FIN TABLA-->
+                        </div>
+                    </div>
+                </div>
+            </div><!--end Col 10-->
+        </div>
+        <!--row principal-->
+    </div>
+
+
+    {% include "footer.html" %}
+
+
+
+{% endblock content %}
+
+{% block scripts %}
+    <script src="{% static 'js/bootstrap5-js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/jquery360/jquery360.js' %}"></script>
+    <script src="{% static 'js/my_jquery_functions.js' %}"></script>
+
+
+{% endblock scripts %}
+
+

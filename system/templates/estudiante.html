@@ -1,0 +1,187 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block styles %}
+    <link href=" {% static 'css/sidebar.css' %}" rel="stylesheet"/>
+{% endblock styles %}
+
+{% block title %}
+    Estudiante
+{% endblock title %}
+
+{% block content %}
+
+
+    <!--Cabecera-->
+
+    {% include "header.html" %}
+
+    <!--Principal Section -->
+    <div class="container-fluid pb-3 mt-1 mb-5">
+        <div class="row ">
+            <div class=" col-1 bg-light"></div>
+
+
+            <!--Area de selección-->
+            <div class=" col-5 bg-light">
+                <div class=" border-top border-bottom rounded-3">
+                    <div class="container mt-5">
+                        <div class="h5 text-center mb-5">Seleccione las asignaturas en el orden de su preferencia:</div>
+
+
+                        <form class="row gy-2 gx-3 align-items-center needs-validation" novalidate id="">
+                            {% if error %}
+                                <div class="alert alert-danger" role="alert">
+                                    Debe escoger distintas asignaturas en su selección
+                                </div>
+                            {% endif %}
+                            <ol>
+                                <li class="m-3 p-1">
+                                    <div class="col-12 position-relative">
+                                        <label class="visually-hidden" for="op1">Preference</label>
+                                        <select class="form-select" id="op1" name="op1" required>
+                                            <option selected disabled value="">-Seleccione-</option>
+                                            <option value="1">Internet de las cosas</option>
+                                            <option value="2">Web semántica</option>
+                                            <option value="3">Seguridad en dispositivos móviles</option>
+                                        </select>
+                                        <div class="invalid-tooltip">
+                                            Por favor, seleccione una opción.
+                                        </div>
+                                        <div class="alert alert-danger p-1" id="op1-error" role="alert"
+                                             style="display: none;">Campo requerido.
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li class="m-3 p-1">
+                                    <div class="col-12 position-relative">
+                                        <label class="visually-hidden" for="op2">Preference</label>
+                                        <select class="form-select" id="op2" name="op2" required>
+                                            <option selected disabled value="">-Seleccione-</option>
+                                            <option value="1">Internet de las Cosas</option>
+                                            <option value="2">Web semántica</option>
+                                            <option value="3">Seguridad en Dispositivos móviles</option>
+                                        </select>
+                                        <div class="invalid-tooltip">
+                                            Por favor, seleccione una opción.
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li class="m-3 p-1">
+                                    <div class="col-12 position-relative">
+                                        <label class="visually-hidden" for="op3">Preferencia</label>
+                                        <select class="form-select" id="op3" name="op3" required>
+                                            <option selected disabled value="">-Seleccione-</option>
+                                            <option value="1">Internet de las Cosas</option>
+                                            <option value="2">Web semántica</option>
+                                            <option value="3">Seguridad en Dispositivos móviles</option>
+                                        </select>
+                                        <div class="invalid-tooltip">
+                                            Por favor, seleccione una opción.
+                                        </div>
+                                    </div>
+                                </li>
+                            </ol>
+                            <div class="col-10"></div>
+                            <div class="col-2 pb-5 ">
+                                <button type="submit" class="btn btn-primary" id="">Aceptar</button>
+                                <!--id liveToastBtn-->
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div><!--end Col 6-->
+
+            <!--Aside - info de Optativas-->
+            <div class=" col-6 border-top rounded-3 bg-light">
+                <div class="rounded-3">
+                    <div class="container mt-2">
+                        <div class="h5 p-2">Asignaturas disponibles:
+                        </div>
+                        <div class="accordion small" id="accordionPanelsStayOpenExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                    <button class="accordion-button collapsed p-2" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                                        Internet de las cosas
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                     aria-labelledby="panelsStayOpen-headingOne">
+                                    <div class="accordion-body">
+                                        <strong>Internet of Things (IoT)</strong> describe la red de objetos físicos
+                                        (cosas) que incorporan sensores, software y otras tecnologías con el fin de
+                                        conectar e intercambiar datos con otros dispositivos y sistemas a través de
+                                        Internet.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                    <button class="accordion-button collapsed p-2" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                        Web Semántica
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                     aria-labelledby="panelsStayOpen-headingTwo">
+                                    <div class="accordion-body">
+                                        <strong>La Web Semántica </strong> es una Web extendida, dotada de mayor
+                                        significado en la que cualquier usuario en Internet podrá encontrar respuestas a
+                                        sus preguntas de forma más rápida y sencilla gracias a una información mejor
+                                        definida.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                    <button class="accordion-button collapsed p-2" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                                            aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                        Seguridad en dispositivos móviles
+                                    </button>
+                                </h2>
+                                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                     aria-labelledby="panelsStayOpen-headingThree">
+                                    <div class="accordion-body">
+                                        <strong>Los dispositivos móviles</strong> son cada vez más llamativos para los
+                                        ladrones o delincuentes informáticos, por lo que es necesario utilizar
+                                        herramientas de seguridad como la contraseña y aplicaciones para bloquear,
+                                        rastrear y borrar remotamente la información almacenada en el equipo en caso de
+                                        robo o pérdida.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div><!--end ASIDE Col 4-->
+
+
+        </div><!--row principal-->
+    </div>
+
+
+    <!--FLOTANTE ASIGNATURAS GUARDADAS-->
+
+    {% include "footer.html" %}
+
+
+
+{% endblock content %}
+
+{% block scripts %}
+    <script src="{% static 'js/bootstrap5-js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap5-js/popper.min.js' %}"></script>
+
+
+{% endblock scripts %}

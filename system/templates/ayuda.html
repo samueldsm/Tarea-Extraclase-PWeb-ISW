@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block styles %}
+    <link href=" {% static 'css/sidebar.css' %}" rel="stylesheet"/>
+{% endblock styles %}
+
+{% block title %}
+    Principal
+{% endblock title %}
+
+{% block content %}
+
+
+    <!--Cabecera-->
+
+    {% include "header.html" %}
+
+
+    <div class="container  bg-white ">
+
+        <div class="h3  opacity-75">Ayuda</div>
+        <div class="container p-4 text-center">
+            <div class="container p-3 ">
+                <div class="h5 mb-2 text-center">¿QUÉ SERVICIOS OFRECE EL SISTEMA DE GESTIÓN?</div>
+                <div class="ms-5 me-5 mb-5">
+                    <p class="justify-content-end opacity-75">El Sistema de Gestión de Asignaturas Optativas de la
+                        Facultad 2
+                        brinda al usuario la posibilidad de automatizar los principales procesos
+                        que se llevan a cabo para otorgar las asignaturas optativas a cursar por los
+                        estudiantes en cada año académico.
+                    </p>
+                </div>
+                <div class="h5 mb-2 text-center">¿QUIÉNES SOMOS?</div>
+                <div class="ms-5 me-5 mb-5">
+                    <p class="opacity-75 mb-4">Somos un grupo de estudiantes de 4to año de la carrera Ingeniería en
+                        Ciencias Informáticas.</p>
+                </div>
+                <div class="h5 mb-2 text-center">CONTÁCTENOS:</div>
+                <div class="mb-5 text-center">
+                    <ul class="opacity-75 ">
+                        <li class="d-grid"> Anabel Martínez Reina: areina@estudiantes.uci.cu</li>
+                        <li class="d-grid ">Elizabeth Losa Pérez: elizabethlp@estudiantes.uci.cu</li>
+                        <li class="d-grid">Samuel David Santiesteban Macías: samueldsm@estudiantes.uci.cu</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    {% include "footer.html" %}
+
+
+
+{% endblock content %}
+
+{% block scripts %}
+    <script src="{% static 'js/bootstrap5-js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/jquery360/jquery360.js' %}"></script>
+    <script src="{% static 'js/my_jquery_functions.js' %}"></script>
+
+
+{% endblock scripts %}
+

@@ -3,19 +3,43 @@
 
 $(document).ready(function(){
 
- /* $("#delete").click(function(){
 
-    $("tbody tr td").empty();
-  }); */
-  /*$("#delete").click(function(){
-    $("tr th").empty();
+    //    button click
+  $("#btnappend").on('submit',(function(e) {
+    e.preventDefault();
 
-   alert( $("#flexCheckChecked") ) 
+      var name = $('#name_asig').val();
+        var matr = $('#asig_matr').val();
 
-      
-    
-    
-  });*/
+        alert(name);
+
+
+
+        $('#my_table > tbody:last-child  ').append(' <tr>    \n' +
+            '                              <th scope="row">\n' +
+            '                                <input class="form-check-input" type="checkbox" value="2" id="flexCheckChecked" >\n' +
+            '                                <label class="form-check-label" for="flexCheckChecked"></label>\n' +
+            '                              </th>\n' +
+            '                              <td>' + name + '</td>\n' +
+            '                              <td>' + matr + '</td>\n' +
+            '                             </tr>');
+
+
+    }));
+
+
+
+
+
+ 
+  // $("#delete").click(function(){
+  //   $("#my_table > tbody:last-child").empty();
+  //
+  //
+  //
+  //
+  //
+  // });
 
 
   //Validar selección de asignaturas optativas
