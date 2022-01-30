@@ -15,13 +15,13 @@
                     almacenamiento de la información de la matrícula de las asignaturas optativas de la Facultad 2 de la
                     Universidad de las Ciencias Informáticas.
                 </p>
+
             </div>
             <div class="col-md-10 mx-auto col-lg-5 ">
                 <form class="p-4 p-md-5 border rounded-3 bg-light needs-validation shadow" method="POST" novalidate>
                     {% if error %}
-                        <div class="alert alert-danger" role="alert">
-                            El nombre de usuario o la contraseña son incorrectos. Comprueba que no esté activada la
-                            tecla Bloq Mayús y vuelve a introducir el nombre de usuario y contraseña.
+                        <div class="alert alert-danger sm" role="alert">
+                            El nombre de usuario o la contraseña son incorrectos. Vuelve a introducir el nombre de usuario y contraseña.
                         </div>
                     {% endif %}
                     <div class="form-floating mb-5 position-relative">

@@ -73,4 +73,5 @@ build.sh
 # Pycharm
 venv
 .idea
-db.sqite3
+*.sqlite
+*.sqlite3
